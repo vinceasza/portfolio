@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+
+        <title></title>
+        <link rel="stylesheet" src="css/norm.css"  />
+        <link rel="stylesheet" type="text/css" src="css/main.css"  />
+
+    </head>
+    <body>
+        <div id="header">
+           <h1>Header One</h1>
+        </div>
+        <div id="content">
+        <div id="sec1">
+           <h2>Section 1</h2>
+        </div>
+        <div id="sec2">
+           <h2>Section 2</h2>
+        </div>
+        <div id="sec3">
+           <h2>Section 3</h2>
+        </div>
+        <div id="sec4">
+           <h2>Section 4</h2>
+        </div>
+        <div id="sec5">
+           <h2>Section 5</h2>
+        </div>
+        </div>
+        <div id="footer">
+            <h3>Footer</h3>
+        </div>
+
+<script>
+   var btn = document.createElement('button');
+   btn.innerHTML = "Back to the top"
+   document.body.appendChild(btn);
+   btn.onclick = function(){
+    window.scroll(0, 800);
+   }
+   
+   var x = window.innerHeight;
+  
+    
+    
+    
+    var v = document.querySelectorAll('h2');
+    var g = [];
+    for (i=0;i<v.length;i++){
+        
+        g.push(v[i].parentElement);
+        g[i].style.height = x + "px"; 
+    }
+    var doc = document.getElementById('header');
+    var doch = doc.offsetHeight;  
+  
+window.onscroll = function(){
+  
+    var scrolled = window.scrollY;
+    console.log(scrolled);
+    if (scrolled > doch) {
+        doc.style.position = 'fixed';
+        doc.style.height = "50px";
+    }
+}
+</script>
+
+
+            
+
+       
+        
+    </body>
+</html>
