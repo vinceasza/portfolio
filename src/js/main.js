@@ -86,7 +86,7 @@ $(document).ready(function(){
 
   //get data for clicked project
   function ajaxRequest(href){
-    $.get('projects.json', function(response){
+    $.getScript('projects.js', function(response){
       for (var i = 0; i < response.length; i++){
         if (response[i].id === href) {
           buildProject(response[i]);

@@ -479,6 +479,39 @@ body {
   margin: 0 10px 0 0;
 }
 
+.no-js .o-row {
+  float: left;
+}
+
+.no-js .o-content {
+  width: 100%;
+}
+
+@media (min-width: 750px) {
+  .no-js .o-content {
+    width: 50%;
+    float: left;
+  }
+}
+
+.no-js .o-img {
+  width: 100%;
+  margin-left: 0;
+}
+
+@media (min-width: 750px) {
+  .no-js .o-img {
+    width: 45%;
+    float: right;
+    margin-left: 5%;
+    margin-top: 20px;
+  }
+}
+
+.no-js .o-img img {
+  max-width: 100%;
+}
+
 .overlay {
   display: none;
   z-index: 210;
@@ -514,20 +547,26 @@ body {
 }
 
 .overlay .o-controls img {
-  height: 33px;
+  height: 40px;
+  margin: 0 auto;
+  display: block;
 }
 
 .overlay .o-controls .prev-arrow,
-.overlay .o-controls .next-arrow {
-  margin: 0 5px;
+.overlay .o-controls .next-arrow,
+.overlay .o-controls .close-overlay {
+  display: inline-block;
+  width: 50px;
+}
+
+.overlay .o-row {
+  margin-top: 70px;
+  padding-top: 40px;
+  border-top: 3px solid tomato;
 }
 
 .overlay .o-content {
   height: 100%;
-}
-
-.overlay .o-content span {
-  display: inline-block;
 }
 
 @media (min-width: 750px) {
@@ -535,6 +574,10 @@ body {
     width: 50%;
     float: left;
   }
+}
+
+.overlay .o-content span {
+  display: inline-block;
 }
 
 .overlay .o-img {
@@ -547,7 +590,7 @@ body {
     width: 45%;
     float: right;
     margin-left: 5%;
-    padding: 90px 0;
+    margin-top: 20px;
   }
 }
 
